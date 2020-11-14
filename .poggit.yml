@@ -1,0 +1,10 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/PresentKim/png-converter
+branches:
+  - main
+projects:
+  png-converter:
+    model: virion
+    type: library
+    lint:
+      phpstan: false
+...

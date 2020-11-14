@@ -1,0 +1,8 @@
+---
+name: png-converter
+antigen: kim\present\converter\png
+version: 1.0.0
+api: 3.0.0
+authors: [PresentKim, Blugin-team]
+description: Converter to convert png file to SkinImage
+...
