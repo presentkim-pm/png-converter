@@ -7,4 +7,7 @@ projects:
     type: library
     lint:
       phpstan: false
+    libs:
+      - src: PresentKim/arrayutils/arrayutils
+        version: ^4.0.0
 ...
