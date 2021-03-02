@@ -71,9 +71,9 @@ final class PngConverter{
         Arr::from(str_split($skinImage->getData()))
             ->map(function(string $char) : int{ return ord($char); })
             ->chunk(4)
-            ->forEach(function(int $index, array $colorChunk) use ($image, $width){
+            ->forEach($colorChunk as $index => $value) {
                 $colorChunk[] = 127 - intdiv(array_pop($colorChunk), 2);
-                imagesetpixel($image, $index % $width, (int) ($index / $width), imagecolorallocatealpha($image, ...$colorChunk));
+                imagesetpixel($image, $index % $width, (int) ($index / $width), imagecolorallocatealpha($image, ...$colorChunk);
             });
         return $image;
     }
