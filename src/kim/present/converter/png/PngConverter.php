@@ -25,8 +25,8 @@ declare(strict_types=1);
 namespace kim\present\converter\png;
 
 use kim\present\lib\arrayutils\ArrayUtils as Arr;
-use pocketmine\network\mcpe\protocol\types\SkinData;
-use pocketmine\network\mcpe\protocol\types\SkinImage;
+use pocketmine\network\mcpe\protocol\types\skin\SkinData;
+use pocketmine\network\mcpe\protocol\types\skin\SkinImage;
 
 final class PngConverter{
     private function __construct(){
