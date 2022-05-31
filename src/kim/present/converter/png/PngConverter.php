@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  *
  *  ____                           _   _  ___
  * |  _ \ _ __ ___  ___  ___ _ __ | |_| |/ (_)_ __ ___
@@ -18,6 +18,8 @@
  *   (\ /)
  *  ( . .) ♥
  *  c(")(")
+ *
+ * @noinspection PhpUnused
  */
 
 declare(strict_types=1);
@@ -27,6 +29,7 @@ namespace kim\present\converter\png;
 use kim\present\lib\arrayutils\ArrayUtils as Arr;
 use pocketmine\network\mcpe\protocol\types\skin\SkinData;
 use pocketmine\network\mcpe\protocol\types\skin\SkinImage;
+use RuntimeException;
 
 final class PngConverter{
     private function __construct(){
@@ -54,8 +57,9 @@ final class PngConverter{
 
     public static function toSkinImageFromFile(string $filepath) : SkinImage{
         $resource = imagecreatefrompng($filepath);
-        if($resource === false)
-            throw new \RuntimeException("Failed to read $filepath");
+        if($resource === false){
+            throw new RuntimeException("Failed to read $filepath");
+        }
 
         return self::toSkinImage($resource);
     }
