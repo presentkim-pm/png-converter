@@ -1,4 +1,4 @@
---- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/PresentKim/png-converter
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/presentkim-pm/png-converter
 branches:
   - main
 projects:
@@ -8,6 +8,6 @@ projects:
     lint:
       phpstan: false
     libs:
-      - src: PresentKim/arrayutils/arrayutils
-        version: ^4.0.0
+      - src: presentkim-pm/arrayutils/arrayutils
+        version: ^4.1.1
 ...
